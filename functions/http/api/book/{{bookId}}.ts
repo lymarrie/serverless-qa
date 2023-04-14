@@ -4,4 +4,5 @@ export default function Book(request) {
     console.log('Site: ', site)
     console.log("Path Params: ", pathParams)
     console.log("Query Params: ", queryParams)
+    console.log(YEXT_PUBLIC_UNIVERSE)
 }
