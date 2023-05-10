@@ -5,5 +5,9 @@ export default function main(request) {
     console.log("Path Params: ", pathParams)
     console.log("Query Params: ", queryParams)
 
-    return { "hello": "world" }
+    return { 
+        body: "Hello World (from API folder)",
+        headers: null,
+        statusCode: 200
+    }
 }
