@@ -110,13 +110,14 @@ const Location: Template<TemplateRenderProps> = ({
   __meta
 }) => {
   const {
+    id,
     name,
   } = document;
 
 
   function testHTTP() {
-    return fetch(`http://localhost:8000/helloWorld`)
-      .then(data => data)
+    return fetch(`http://localhost:8000/api/book/${id}`)
+      .then(data => data.json())
   }
 
   // if (__meta.mode == "development") {
@@ -139,6 +140,7 @@ const Location: Template<TemplateRenderProps> = ({
   return (
     <>
       <div>{name}</div>
+      {localHttp.message && <div>{localHttp.message}</div>}
     </>
   );
 };
