@@ -15,8 +15,9 @@ export default function Book(request) {
                 <div style="margin: auto; width:50%; border: 3px solid green; padding: 10px">
                     <body>
                         <h1>API!</h1>
-                        <div>Path Params: ${pathParams}</div>
-                        <div>Query params: ${queryParams}</div>
+                        <div>Path Params: ${JSON.stringify(pathParams)}</div>
+                        <div>Query params: ${JSON.stringify(queryParams)}</div>
+                        <div>Site object: ${JSON.stringify(site)}</div>
                     </body>
                 </div>
             </body>
