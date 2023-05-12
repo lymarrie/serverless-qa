@@ -14,6 +14,7 @@ import {
   TemplateProps,
   TemplateRenderProps,
 } from "@yext/pages";
+import Header from "../components/Header";
 
 /**
  * Not required depending on your use case.
@@ -31,7 +32,7 @@ export const config: TemplateConfig = {
  * NOTE: This currently has no impact on the local dev path. Local dev urls currently
  * take on the form: featureName/entityId
  */
-export const getPath: GetPath<ExternalImageData> = () => {
+export const getPath: GetPath<TemplateProps> = () => {
   return `index.html`;
 };
 
@@ -75,12 +76,21 @@ const Static: Template<TemplateRenderProps> = ({
     console.log(__meta)
   return (
     <>
+        <Header />
         <div className="centered-container">
             <div className="section grid gap-y-5">
-                <h1>HTTP Functions</h1>
-                <a href={relativePrefixToRoot + "/helloWorld"} className="hover:underline">{relativePrefixToRoot}/helloWorld</a>
-                <a href={relativePrefixToRoot + "/api/names/helloWorld"}  className="hover:underline">{relativePrefixToRoot}/api/helloWorld</a>
-                <a href={relativePrefixToRoot + "/api/names/bob"} className="hover:underline">{relativePrefixToRoot}/api/[replace-me]</a>
+                <h1>HTTP Function Examples</h1>
+                <ul className="ml-4">
+                    <li className="list-disc">
+                        <a href={relativePrefixToRoot + "/helloWorld"} className="hover:underline">{relativePrefixToRoot}/helloWorld</a>
+                    </li>
+                    <li className="list-disc">
+                        <a href={relativePrefixToRoot + "/api/names/helloWorld"}  className="hover:underline">{relativePrefixToRoot}/api/names/helloWorld</a>
+                    </li>
+                    <li className="list-disc">
+                        <a href={relativePrefixToRoot + "/api/names/bob"} className="hover:underline">{relativePrefixToRoot}/api/names/[replace-me]</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </>
