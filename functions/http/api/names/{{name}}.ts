@@ -9,7 +9,7 @@ export default function Book(request) {
         pathParams: pathParams,
         queryParams: queryParams,
         site: site,
-        message: "this was returned by the http function"
+        message: ("Hello " + pathParams.name)
     };
 
     
