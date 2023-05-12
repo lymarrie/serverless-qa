@@ -79,7 +79,21 @@ const Static: Template<TemplateRenderProps> = ({
         <Header />
         <div className="centered-container">
             <div className="section grid gap-y-5">
-                <h1>HTTP Function Examples</h1>
+                <h1>HTTP Functions</h1>
+                <ul className="ml-4">
+                    <li className="list-disc">
+                        <div>/helloWorld</div>
+                    </li>
+                    <li className="list-disc">
+                        <div>/api/helloWorld</div>
+                    </li>
+                    <li className="list-disc">
+                        <div>{`/api/names/{{name}}`}</div>
+                    </li>
+                </ul>
+            </div>
+            <div className="section grid gap-y-5">
+                <h1>HTTP Function Example Links</h1>
                 <ul className="ml-4">
                     <li className="list-disc">
                         <a href={relativePrefixToRoot + "/helloWorld"} className="hover:underline">{relativePrefixToRoot}/helloWorld</a>
@@ -88,13 +102,10 @@ const Static: Template<TemplateRenderProps> = ({
                         <a href={relativePrefixToRoot + "/api/helloWorld"}  className="hover:underline">{relativePrefixToRoot}/api/helloWorld</a>
                     </li>
                     <li className="list-disc">
-                        <a href={relativePrefixToRoot + "/api/names/bob"} className="hover:underline">{relativePrefixToRoot}/api/names/[replace-me]</a>
+                        <a href={relativePrefixToRoot + "/api/names/alice?id=example"} className="hover:underline">{relativePrefixToRoot}/api/names/bob</a>
                     </li>
                     <li className="list-disc">
-                        <a href={relativePrefixToRoot + "/api/names/alice?id=example"} className="hover:underline">{relativePrefixToRoot}/api/names/[replace-me]?id=example</a>
-                    </li>
-                    <li className="list-disc">
-                        <a href={relativePrefixToRoot + "/api/names/bob?id=example&id2=example"} className="hover:underline">{relativePrefixToRoot}/api/names/[replace-me]?id=example</a>
+                        <a href={relativePrefixToRoot + "/api/names/bob?id=example&id2=example"} className="hover:underline">{relativePrefixToRoot}/api/names/alice?id=hello&id2=world</a>
                     </li>
                 </ul>
             </div>
