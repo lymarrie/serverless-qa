@@ -1,4 +1,4 @@
-export default function Book(request) {
+export default function Name(request) {
     const { pathParams, queryParams, site } = request
 
     let response = {
