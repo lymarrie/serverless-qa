@@ -6,7 +6,7 @@ export default function main(request) {
     console.log("Query Params: ", queryParams)
 
     return { 
-        body: "Hello World (from names folder)",
+        body: "Hello World (from /api folder)",
         headers: null,
         statusCode: 200
     }

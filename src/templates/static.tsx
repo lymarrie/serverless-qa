@@ -85,7 +85,7 @@ const Static: Template<TemplateRenderProps> = ({
                         <a href={relativePrefixToRoot + "/helloWorld"} className="hover:underline">{relativePrefixToRoot}/helloWorld</a>
                     </li>
                     <li className="list-disc">
-                        <a href={relativePrefixToRoot + "/api/names/helloWorld"}  className="hover:underline">{relativePrefixToRoot}/api/names/helloWorld</a>
+                        <a href={relativePrefixToRoot + "/api/helloWorld"}  className="hover:underline">{relativePrefixToRoot}/api/helloWorld</a>
                     </li>
                     <li className="list-disc">
                         <a href={relativePrefixToRoot + "/api/names/bob"} className="hover:underline">{relativePrefixToRoot}/api/names/[replace-me]</a>
